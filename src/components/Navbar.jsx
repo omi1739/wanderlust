@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from '@/assets/Wanderlast.png'
+
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className='flex justify-between mt-3 '>
+      <ul className='flex justify-between gap-3'>
         <li>
           <Link href={"/"}>Home</Link>
         </li>
@@ -20,12 +20,25 @@ const Navbar = () => {
 
         <div className="">
             <Image 
-            src={logo}
+            src={'/assets/Wanderlast.png'}
             alt="logo"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             />
         </div>
+
+        <ul className='flex justify-between gap-3'>
+        <li>
+          <Link href={"/profile"}>Profile</Link>
+        </li>
+        <li>
+          <Link href={"/login"}>Login</Link>
+        </li>
+        <li>
+          <Link href={"/signup"}>Sign Up</Link>
+        </li>
+      </ul>
+
 
     </nav>
   );
